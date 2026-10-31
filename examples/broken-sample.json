@@ -1,0 +1,2716 @@
+{
+  "tool": "fgaudit",
+  "schema_version": "1.2",
+  "metadata": {
+    "tool": "fgaudit",
+    "tool_version": "2.1.0",
+    "fortios_version": "7.2.5",
+    "platform": "FGVM64",
+    "build": "1517",
+    "raw_header": "#config-version=FGVM64-7.2.5-FW-build1517-230810:opmode=0:vdom=0",
+    "multi_vdom": false,
+    "vdoms": [
+      "root"
+    ],
+    "policy_count": 9,
+    "source_lines": 269,
+    "section_count": 19,
+    "dump_style": "standard",
+    "generated_at": "2026-09-23 04:20:34",
+    "source_file": "broken_config.conf",
+    "duration_seconds": 0.005,
+    "coverage": {
+      "domains": [
+        {
+          "domain": "Firewall rules",
+          "status": "analyzed",
+          "present": true,
+          "count": 9,
+          "note": "checked for security issues"
+        },
+        {
+          "domain": "Address and service objects",
+          "status": "analyzed",
+          "present": true,
+          "count": 9,
+          "note": "checked for security issues"
+        },
+        {
+          "domain": "NAT and published servers (VIPs)",
+          "status": "analyzed",
+          "present": true,
+          "count": 1,
+          "note": "checked for security issues"
+        },
+        {
+          "domain": "Admin accounts",
+          "status": "analyzed",
+          "present": true,
+          "count": 3,
+          "note": "checked for security issues"
+        },
+        {
+          "domain": "Authentication servers and users",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "Interfaces",
+          "status": "analyzed",
+          "present": true,
+          "count": 3,
+          "note": "checked for security issues"
+        },
+        {
+          "domain": "Local-in policies",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "Zones",
+          "status": "analyzed",
+          "present": true,
+          "count": 1,
+          "note": "checked for security issues"
+        },
+        {
+          "domain": "SD-WAN",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "VPN (IPsec and SSL-VPN)",
+          "status": "analyzed",
+          "present": true,
+          "count": 1,
+          "note": "checked for security issues"
+        },
+        {
+          "domain": "Security profiles",
+          "status": "analyzed",
+          "present": true,
+          "count": 4,
+          "note": "checked for security issues"
+        },
+        {
+          "domain": "Logging",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "High availability",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "SNMP",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "System settings",
+          "status": "analyzed",
+          "present": true,
+          "count": 1,
+          "note": "checked for security issues"
+        },
+        {
+          "domain": "Proxy policy",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "NGFW security policy",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "DoS policy",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "Multicast policy",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "Interface policy",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "Traffic shaping policy",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "Hardware ACL",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "TTL policy",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "Static route",
+          "status": "references-only",
+          "present": true,
+          "count": 1,
+          "note": "read to see which objects are in use, not checked on its own"
+        },
+        {
+          "domain": "Policy route",
+          "status": "references-only",
+          "present": true,
+          "count": 1,
+          "note": "read to see which objects are in use, not checked on its own"
+        },
+        {
+          "domain": "IPsec tunnel settings",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "IPsec phase 2 selector",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "SSL-VPN portal",
+          "status": "references-only",
+          "present": true,
+          "count": 1,
+          "note": "read to see which objects are in use, not checked on its own"
+        },
+        {
+          "domain": "SSL inspection exemption",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "Authentication rule",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "Security exempt list",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "VIP group",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        },
+        {
+          "domain": "SD-WAN rule",
+          "status": "absent",
+          "present": false,
+          "count": 0,
+          "note": "not in this backup"
+        }
+      ],
+      "warnings": [
+        "Unused-object results cover rules of every kind, groups, routes, VPN and SD-WAN settings. Objects used only by FortiManager, scripts or runtime state can still show up as unused, so check before deleting.",
+        "This looks like a normal backup, which leaves out every setting that is at its factory default. The review reads a missing setting as the FortiOS default.",
+        "No hit counters were given (--hit-counts), so rules that are enabled but never used can't be found."
+      ],
+      "reference_confidence": 0.9,
+      "summary": {
+        "analyzed": 9,
+        "references_only": 3,
+        "not_modeled": 0
+      }
+    },
+    "exposure_map": {
+      "root": [
+        {
+          "external": "203.0.113.10:443/tcp",
+          "internal": "10.0.0.50:443",
+          "service": "tcp/443",
+          "via": "vip:WEB_VIP",
+          "policy": "1",
+          "profiles": [
+            "none"
+          ],
+          "ssl_inspection": "n/a",
+          "naked": true
+        },
+        {
+          "external": "from any IPv4 address",
+          "internal": "any IPv4 address",
+          "service": "ALL",
+          "via": "policy:3",
+          "policy": "3",
+          "profiles": [
+            "none"
+          ],
+          "ssl_inspection": "n/a",
+          "naked": true
+        }
+      ]
+    },
+    "nat_mode": {
+      "root": "policy-nat"
+    },
+    "internet_facing_interfaces": [
+      "wan1"
+    ]
+  },
+  "coverage": {
+    "domains": [
+      {
+        "domain": "Firewall rules",
+        "status": "analyzed",
+        "present": true,
+        "count": 9,
+        "note": "checked for security issues"
+      },
+      {
+        "domain": "Address and service objects",
+        "status": "analyzed",
+        "present": true,
+        "count": 9,
+        "note": "checked for security issues"
+      },
+      {
+        "domain": "NAT and published servers (VIPs)",
+        "status": "analyzed",
+        "present": true,
+        "count": 1,
+        "note": "checked for security issues"
+      },
+      {
+        "domain": "Admin accounts",
+        "status": "analyzed",
+        "present": true,
+        "count": 3,
+        "note": "checked for security issues"
+      },
+      {
+        "domain": "Authentication servers and users",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "Interfaces",
+        "status": "analyzed",
+        "present": true,
+        "count": 3,
+        "note": "checked for security issues"
+      },
+      {
+        "domain": "Local-in policies",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "Zones",
+        "status": "analyzed",
+        "present": true,
+        "count": 1,
+        "note": "checked for security issues"
+      },
+      {
+        "domain": "SD-WAN",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "VPN (IPsec and SSL-VPN)",
+        "status": "analyzed",
+        "present": true,
+        "count": 1,
+        "note": "checked for security issues"
+      },
+      {
+        "domain": "Security profiles",
+        "status": "analyzed",
+        "present": true,
+        "count": 4,
+        "note": "checked for security issues"
+      },
+      {
+        "domain": "Logging",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "High availability",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "SNMP",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "System settings",
+        "status": "analyzed",
+        "present": true,
+        "count": 1,
+        "note": "checked for security issues"
+      },
+      {
+        "domain": "Proxy policy",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "NGFW security policy",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "DoS policy",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "Multicast policy",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "Interface policy",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "Traffic shaping policy",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "Hardware ACL",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "TTL policy",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "Static route",
+        "status": "references-only",
+        "present": true,
+        "count": 1,
+        "note": "read to see which objects are in use, not checked on its own"
+      },
+      {
+        "domain": "Policy route",
+        "status": "references-only",
+        "present": true,
+        "count": 1,
+        "note": "read to see which objects are in use, not checked on its own"
+      },
+      {
+        "domain": "IPsec tunnel settings",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "IPsec phase 2 selector",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "SSL-VPN portal",
+        "status": "references-only",
+        "present": true,
+        "count": 1,
+        "note": "read to see which objects are in use, not checked on its own"
+      },
+      {
+        "domain": "SSL inspection exemption",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "Authentication rule",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "Security exempt list",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "VIP group",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      },
+      {
+        "domain": "SD-WAN rule",
+        "status": "absent",
+        "present": false,
+        "count": 0,
+        "note": "not in this backup"
+      }
+    ],
+    "warnings": [
+      "Unused-object results cover rules of every kind, groups, routes, VPN and SD-WAN settings. Objects used only by FortiManager, scripts or runtime state can still show up as unused, so check before deleting.",
+      "This looks like a normal backup, which leaves out every setting that is at its factory default. The review reads a missing setting as the FortiOS default.",
+      "No hit counters were given (--hit-counts), so rules that are enabled but never used can't be found."
+    ],
+    "reference_confidence": 0.9,
+    "summary": {
+      "analyzed": 9,
+      "references_only": 3,
+      "not_modeled": 0
+    }
+  },
+  "summary": {
+    "overall_score": 49,
+    "total_findings": 44,
+    "by_severity": {
+      "Critical": 4,
+      "High": 12,
+      "Medium": 8,
+      "Low": 10,
+      "Informational": 10
+    },
+    "by_category": {
+      "Administrative Security": 7,
+      "Firewall Policy": 15,
+      "System Hardening": 8,
+      "High Availability": 1,
+      "Interface": 2,
+      "Logging & Monitoring": 1,
+      "Objects": 6,
+      "Security Profile": 2,
+      "VPN": 2
+    },
+    "by_vdom": {
+      "root": 44
+    },
+    "by_exposure": {
+      "management plane": 13,
+      "internet-facing": 10,
+      "internal": 21
+    },
+    "heatmap": {
+      "Firewall Policy": {
+        "Critical": 2,
+        "High": 6,
+        "Medium": 3,
+        "Low": 2,
+        "Informational": 2
+      },
+      "Objects": {
+        "Critical": 0,
+        "High": 0,
+        "Medium": 0,
+        "Low": 2,
+        "Informational": 4
+      },
+      "Administrative Security": {
+        "Critical": 0,
+        "High": 3,
+        "Medium": 2,
+        "Low": 1,
+        "Informational": 1
+      },
+      "Authentication": {
+        "Critical": 0,
+        "High": 0,
+        "Medium": 0,
+        "Low": 0,
+        "Informational": 0
+      },
+      "Interface": {
+        "Critical": 1,
+        "High": 1,
+        "Medium": 0,
+        "Low": 0,
+        "Informational": 0
+      },
+      "VPN": {
+        "Critical": 0,
+        "High": 1,
+        "Medium": 0,
+        "Low": 1,
+        "Informational": 0
+      },
+      "Security Profile": {
+        "Critical": 0,
+        "High": 0,
+        "Medium": 2,
+        "Low": 0,
+        "Informational": 0
+      },
+      "Logging & Monitoring": {
+        "Critical": 0,
+        "High": 0,
+        "Medium": 1,
+        "Low": 0,
+        "Informational": 0
+      },
+      "High Availability": {
+        "Critical": 0,
+        "High": 0,
+        "Medium": 0,
+        "Low": 0,
+        "Informational": 1
+      },
+      "System Hardening": {
+        "Critical": 1,
+        "High": 1,
+        "Medium": 0,
+        "Low": 4,
+        "Informational": 2
+      }
+    },
+    "top_risks": [
+      {
+        "unique_id": "POLICY_ANY_ANY_ANY-91365738",
+        "title": "Rule allows any source to reach any destination on any port",
+        "severity": "Critical",
+        "risk_score": 60,
+        "vdom": "root",
+        "affected_object": "policy 3 \"WAN-Full-Access\"",
+        "exposure": "internet-facing"
+      },
+      {
+        "unique_id": "FW_KNOWN_EXPLOITED-132a6215",
+        "title": "Firmware has a vulnerability that attackers are known to use",
+        "severity": "Critical",
+        "risk_score": 60,
+        "vdom": "root",
+        "affected_object": "CVE-2024-21762 on FortiOS 7.2.5",
+        "exposure": "internet-facing"
+      },
+      {
+        "unique_id": "IFACE_MGMT_ON_WAN-a1934f7d",
+        "title": "Firewall management is reachable from the internet",
+        "severity": "Critical",
+        "risk_score": 56,
+        "vdom": "root",
+        "affected_object": "wan1",
+        "exposure": "management plane"
+      },
+      {
+        "unique_id": "POLICY_SHADOW_CONFLICT-c965dcef",
+        "title": "Rule never takes effect because an earlier rule does the opposite",
+        "severity": "Critical",
+        "risk_score": 40,
+        "vdom": "root",
+        "affected_object": "policy 5 \"Deny-Partner-SSH-shadowed\"",
+        "exposure": "internal"
+      },
+      {
+        "unique_id": "POLICY_ANY_ANY_ANY-37f0f0cd",
+        "title": "Rule allows any source to reach any destination on any port",
+        "severity": "High",
+        "risk_score": 38,
+        "vdom": "root",
+        "affected_object": "policy 2 \"Outbound-Any\"",
+        "exposure": "internet-facing"
+      },
+      {
+        "unique_id": "POLICY_NO_UTM-d2deef7a",
+        "title": "Traffic is allowed without any security inspection",
+        "severity": "High",
+        "risk_score": 38,
+        "vdom": "root",
+        "affected_object": "policy 2 \"Outbound-Any\"",
+        "exposure": "internet-facing"
+      },
+      {
+        "unique_id": "POLICY_WAN_EXPOSURE-49288236",
+        "title": "Internet traffic can reach internal services too broadly",
+        "severity": "High",
+        "risk_score": 38,
+        "vdom": "root",
+        "affected_object": "policy 3 \"WAN-Full-Access\"",
+        "exposure": "internet-facing"
+      },
+      {
+        "unique_id": "ADMIN_NO_MFA-9671d574",
+        "title": "Admin accounts without two-factor authentication",
+        "severity": "High",
+        "risk_score": 35,
+        "vdom": "root",
+        "affected_object": "admin, backup_admin, thirdsuper",
+        "exposure": "management plane"
+      },
+      {
+        "unique_id": "ADMIN_NO_TRUSTED_HOST-993b0484",
+        "title": "Admin accounts that can log in from anywhere",
+        "severity": "High",
+        "risk_score": 35,
+        "vdom": "root",
+        "affected_object": "admin, backup_admin",
+        "exposure": "management plane"
+      },
+      {
+        "unique_id": "ADMIN_INSECURE_ACCESS-88026f5f",
+        "title": "Unencrypted admin access (HTTP or Telnet)",
+        "severity": "High",
+        "risk_score": 35,
+        "vdom": "root",
+        "affected_object": "wan1",
+        "exposure": "management plane"
+      }
+    ],
+    "remediation": [
+      {
+        "rule_id": "POLICY_ANY_ANY_ANY",
+        "title": "Rule allows any source to reach any destination on any port",
+        "severity": "Critical",
+        "count": 3,
+        "max_risk_score": 60,
+        "recommendation": "Replace it with rules for the sources, destinations and services people actually need. If it was added as a temporary fix, remove it.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "FW_KNOWN_EXPLOITED",
+        "title": "Firmware has a vulnerability that attackers are known to use",
+        "severity": "Critical",
+        "count": 2,
+        "max_risk_score": 60,
+        "recommendation": "Upgrade to a fixed release as soon as you can. Until then, turn off or restrict the affected feature and check the firewall for signs of compromise as the advisory describes.",
+        "category": "System Hardening"
+      },
+      {
+        "rule_id": "IFACE_MGMT_ON_WAN",
+        "title": "Firewall management is reachable from the internet",
+        "severity": "Critical",
+        "count": 1,
+        "max_risk_score": 56,
+        "recommendation": "Remove https, http, ssh, telnet and snmp from allowaccess on internet-facing interfaces. If you have to manage over the internet, limit sources with a local-in policy or use a VPN.",
+        "category": "Interface"
+      },
+      {
+        "rule_id": "POLICY_SHADOW_CONFLICT",
+        "title": "Rule never takes effect because an earlier rule does the opposite",
+        "severity": "Critical",
+        "count": 1,
+        "max_risk_score": 40,
+        "recommendation": "Move this rule above the broader one, or narrow the broader rule so it no longer covers this traffic.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "POLICY_NO_UTM",
+        "title": "Traffic is allowed without any security inspection",
+        "severity": "High",
+        "count": 3,
+        "max_risk_score": 38,
+        "recommendation": "Attach security profiles to the rule, at least IPS and antivirus, and make sure utm-status is enabled.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "POLICY_WAN_EXPOSURE",
+        "title": "Internet traffic can reach internal services too broadly",
+        "severity": "High",
+        "count": 1,
+        "max_risk_score": 38,
+        "recommendation": "Publish only what must be public, through VIPs. Restrict sources where you can and put IPS on the rule. Admin protocols such as RDP and SSH belong behind a VPN.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "ADMIN_NO_MFA",
+        "title": "Admin accounts without two-factor authentication",
+        "severity": "High",
+        "count": 1,
+        "max_risk_score": 35,
+        "recommendation": "Enable two-factor authentication (FortiToken, email or SMS) for every admin, or enforce MFA on the RADIUS or LDAP server that authenticates them.",
+        "category": "Administrative Security"
+      },
+      {
+        "rule_id": "ADMIN_NO_TRUSTED_HOST",
+        "title": "Admin accounts that can log in from anywhere",
+        "severity": "High",
+        "count": 1,
+        "max_risk_score": 35,
+        "recommendation": "Set trusthost entries to your management networks. Trusted hosts only help if every admin account has them, and they don't stop attacks that happen before login, so also restrict the admin interfaces with a local-in policy.",
+        "category": "Administrative Security"
+      },
+      {
+        "rule_id": "ADMIN_INSECURE_ACCESS",
+        "title": "Unencrypted admin access (HTTP or Telnet)",
+        "severity": "High",
+        "count": 1,
+        "max_risk_score": 35,
+        "recommendation": "Remove telnet and http from allowaccess on every interface and use SSH and HTTPS only.",
+        "category": "Administrative Security"
+      },
+      {
+        "rule_id": "HARDEN_WEAK_CRYPTO",
+        "title": "Strong cryptography is turned off",
+        "severity": "High",
+        "count": 1,
+        "max_risk_score": 35,
+        "recommendation": "Turn it back on: config system global / set strong-crypto enable.",
+        "category": "System Hardening"
+      },
+      {
+        "rule_id": "EXPOSURE_NAKED_SERVICE",
+        "title": "Service reachable from the internet without any inspection",
+        "severity": "High",
+        "count": 2,
+        "max_risk_score": 32,
+        "recommendation": "Add IPS to the rule (and antivirus where files are exchanged), use deep inspection if the service uses TLS and you can load its certificate, and limit sources where you can.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "VPN_SSLVPN_WAN_PORTAL",
+        "title": "SSL-VPN portal open to the internet",
+        "severity": "High",
+        "count": 1,
+        "max_risk_score": 32,
+        "recommendation": "Keep the firmware on a fixed release, require MFA, restrict source addresses or countries, and consider moving users to IPsec VPN or ZTNA.",
+        "category": "VPN"
+      },
+      {
+        "rule_id": "POLICY_SSL_INEFFECTIVE_PAYLOAD",
+        "title": "Scanners can't see inside encrypted traffic",
+        "severity": "High",
+        "count": 1,
+        "max_risk_score": 25,
+        "recommendation": "Use a deep-inspection SSL/SSH profile on rules where you rely on these scanners, with exemptions for sensitive categories such as banking and health.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "ZONE_INTRAZONE_ALLOW",
+        "title": "Traffic between interfaces in a zone isn't filtered",
+        "severity": "High",
+        "count": 1,
+        "max_risk_score": 25,
+        "recommendation": "Set intrazone deny and write rules for the traffic that should flow, or split unrelated networks into separate zones.",
+        "category": "Interface"
+      },
+      {
+        "rule_id": "POLICY_LOGGING_DISABLED",
+        "title": "Traffic logging is turned off on an allow rule",
+        "severity": "Medium",
+        "count": 1,
+        "max_risk_score": 18,
+        "recommendation": "Set logtraffic to all, or at least utm.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "ADMIN_WEAK_PASSWORD_POLICY",
+        "title": "Weak password rules for admins",
+        "severity": "Medium",
+        "count": 1,
+        "max_risk_score": 17,
+        "recommendation": "Enable the admin password policy with a minimum length of 12 and at least two character types (config system password-policy).",
+        "category": "Administrative Security"
+      },
+      {
+        "rule_id": "ADMIN_MULTIPLE_SUPER_ADMIN",
+        "title": "Several accounts with full super_admin rights",
+        "severity": "Medium",
+        "count": 1,
+        "max_risk_score": 14,
+        "recommendation": "Keep super_admin to one or two accounts and give everyone else a profile limited to their job.",
+        "category": "Administrative Security"
+      },
+      {
+        "rule_id": "LOG_NO_FORTIANALYZER",
+        "title": "Logs aren't sent off the firewall",
+        "severity": "Medium",
+        "count": 1,
+        "max_risk_score": 12,
+        "recommendation": "Send logs to FortiAnalyzer, FortiAnalyzer Cloud or a syslog/SIEM server.",
+        "category": "Logging & Monitoring"
+      },
+      {
+        "rule_id": "PROFILE_SSL_DEFAULT_CA",
+        "title": "Deep inspection uses the built-in Fortinet CA",
+        "severity": "Medium",
+        "count": 1,
+        "max_risk_score": 12,
+        "recommendation": "Issue a subordinate CA from your own PKI for SSL inspection and push it to clients.",
+        "category": "Security Profile"
+      },
+      {
+        "rule_id": "PROFILE_IPS_MONITOR_ONLY",
+        "title": "IPS sensor only watches, never blocks",
+        "severity": "Medium",
+        "count": 1,
+        "max_risk_score": 10,
+        "recommendation": "Set the action to block for high and critical signatures once you've checked for false positives.",
+        "category": "Security Profile"
+      },
+      {
+        "rule_id": "ADMIN_DEFAULT_NAME",
+        "title": "Default 'admin' account still exists",
+        "severity": "Low",
+        "count": 1,
+        "max_risk_score": 7,
+        "recommendation": "Create personal admin accounts, then rename or delete the default 'admin' account.",
+        "category": "Administrative Security"
+      },
+      {
+        "rule_id": "HARDEN_ADMIN_TIMEOUT",
+        "title": "Admin sessions stay open too long",
+        "severity": "Low",
+        "count": 1,
+        "max_risk_score": 6,
+        "recommendation": "Set admintimeout to a short value, such as 5 to 10 minutes.",
+        "category": "System Hardening"
+      },
+      {
+        "rule_id": "HARDEN_ADMIN_LOCKOUT",
+        "title": "Short lockout after failed admin logins",
+        "severity": "Low",
+        "count": 1,
+        "max_risk_score": 6,
+        "recommendation": "Set admin-lockout-threshold to 3 and admin-lockout-duration to 900 seconds or more.",
+        "category": "System Hardening"
+      },
+      {
+        "rule_id": "VPN_SSL_DEFAULT_CERT",
+        "title": "SSL-VPN uses the factory certificate",
+        "severity": "Low",
+        "count": 1,
+        "max_risk_score": 6,
+        "recommendation": "Install a certificate from a trusted CA for the portal's hostname and set it as servercert.",
+        "category": "VPN"
+      },
+      {
+        "rule_id": "POLICY_DUPLICATE",
+        "title": "Duplicate rule",
+        "severity": "Low",
+        "count": 1,
+        "max_risk_score": 5,
+        "recommendation": "Delete the later copy.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "OBJ_EMPTY_GROUP",
+        "title": "Empty address or service group",
+        "severity": "Low",
+        "count": 1,
+        "max_risk_score": 5,
+        "recommendation": "Add the intended members, or remove the group and the rules that use it.",
+        "category": "Objects"
+      },
+      {
+        "rule_id": "OBJ_DUPLICATE_ADDRESS",
+        "title": "Several address objects for the same network",
+        "severity": "Low",
+        "count": 1,
+        "max_risk_score": 5,
+        "recommendation": "Keep one object per network and point all rules at it.",
+        "category": "Objects"
+      },
+      {
+        "rule_id": "HARDEN_THREAT_FEED_MISSING",
+        "title": "No external threat feeds",
+        "severity": "Low",
+        "count": 1,
+        "max_risk_score": 3,
+        "recommendation": "If you have a feed you trust, add it under system external-resource and use it in rules or DNS filtering.",
+        "category": "System Hardening"
+      },
+      {
+        "rule_id": "OBJ_OVERLAPPING_SUBNET",
+        "title": "Address objects that overlap",
+        "severity": "Informational",
+        "count": 2,
+        "max_risk_score": 1,
+        "recommendation": "Check the pair and remove whichever one is left over, if any.",
+        "category": "Objects"
+      },
+      {
+        "rule_id": "ADMIN_LOCAL_ACCOUNT",
+        "title": "Local administrator accounts",
+        "severity": "Informational",
+        "count": 1,
+        "max_risk_score": 1,
+        "recommendation": "Authenticate admins against RADIUS, TACACS+ or LDAP with MFA. Keep a single local break-glass account with a long password stored offline.",
+        "category": "Administrative Security"
+      },
+      {
+        "rule_id": "POLICY_DISABLED",
+        "title": "Disabled rules left in the policy table",
+        "severity": "Informational",
+        "count": 1,
+        "max_risk_score": 1,
+        "recommendation": "Delete disabled rules you no longer need. If you keep one on purpose, say why in its comment.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "POLICY_NO_COMMENT",
+        "title": "Rules without a comment",
+        "severity": "Informational",
+        "count": 1,
+        "max_risk_score": 1,
+        "recommendation": "Add a comment with the purpose and the ticket or change number.",
+        "category": "Firewall Policy"
+      },
+      {
+        "rule_id": "FW_VERSION_REVIEW",
+        "title": "Check this firmware version against Fortinet advisories",
+        "severity": "Informational",
+        "count": 1,
+        "max_risk_score": 1,
+        "recommendation": "Look this model and version up on the Fortinet PSIRT site and upgrade to a fixed release if anything applies.",
+        "category": "System Hardening"
+      },
+      {
+        "rule_id": "HARDEN_LOGIN_BANNER",
+        "title": "No login banner",
+        "severity": "Informational",
+        "count": 1,
+        "max_risk_score": 1,
+        "recommendation": "Enable pre-login-banner in system global and set the text under config system replacemsg admin.",
+        "category": "System Hardening"
+      },
+      {
+        "rule_id": "HA_STANDALONE",
+        "title": "No high availability",
+        "severity": "Informational",
+        "count": 1,
+        "max_risk_score": 1,
+        "recommendation": "If this firewall carries production traffic, consider an HA pair.",
+        "category": "High Availability"
+      },
+      {
+        "rule_id": "OBJ_UNUSED_ADDRESS",
+        "title": "Unused address objects",
+        "severity": "Informational",
+        "count": 1,
+        "max_risk_score": 1,
+        "recommendation": "Delete them after checking that nothing outside this firewall (FortiManager, scripts) depends on them.",
+        "category": "Objects"
+      },
+      {
+        "rule_id": "OBJ_UNUSED_SERVICE",
+        "title": "Unused custom services",
+        "severity": "Informational",
+        "count": 1,
+        "max_risk_score": 1,
+        "recommendation": "Delete custom services you no longer need.",
+        "category": "Objects"
+      }
+    ],
+    "compliance_hits": {
+      "NIST CSF": 34,
+      "PCI DSS": 26,
+      "ISO 27001": 41,
+      "CIS": 18,
+      "MITRE ATT&CK": 19
+    }
+  },
+  "findings": [
+    {
+      "unique_id": "POLICY_ANY_ANY_ANY-91365738",
+      "rule_id": "POLICY_ANY_ANY_ANY",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "Critical",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 60,
+      "exposure": "internet-facing",
+      "affected_object": "policy 3 \"WAN-Full-Access\"",
+      "title": "Rule allows any source to reach any destination on any port",
+      "description": "Policy 3 \"WAN-Full-Access\" allows any source to reach any destination on any service, for traffic coming in from the internet.",
+      "impact": "Anything that arrives on the rule's interfaces gets through. Segmentation stops at this rule, and an attacker who lands on one side can reach everything on the other.",
+      "recommendation": "Replace it with rules for the sources, destinations and services people actually need. If it was added as a temporary fix, remove it.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config firewall policy / edit 3 (line 150)",
+        "wan1 -> dmz; from any IPv4 address to any IPv4 address; service ALL; action accept"
+      ],
+      "compliance": {
+        "CIS": [
+          "4.1"
+        ],
+        "NIST CSF": [
+          "PR.AC-5",
+          "PR.PT-3"
+        ],
+        "MITRE ATT&CK": [
+          "T1021"
+        ],
+        "PCI DSS": [
+          "1.2.1",
+          "1.3.4"
+        ],
+        "ISO 27001": [
+          "A.8.20",
+          "A.8.22"
+        ]
+      }
+    },
+    {
+      "unique_id": "FW_KNOWN_EXPLOITED-132a6215",
+      "rule_id": "FW_KNOWN_EXPLOITED",
+      "vdom": "root",
+      "category": "System Hardening",
+      "severity": "Critical",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 60,
+      "exposure": "internet-facing",
+      "affected_object": "CVE-2024-21762 on FortiOS 7.2.5",
+      "title": "Firmware has a vulnerability that attackers are known to use",
+      "description": "FortiOS 7.2.5 is affected by CVE-2024-21762 (FG-IR-24-015): an out-of-bounds write in the SSL-VPN daemon that lets an unauthenticated attacker run code on the firewall. The vulnerable code is in SSL-VPN, which is enabled on wan1 here and reachable from the internet. It's in CISA's catalog of known exploited vulnerabilities.",
+      "impact": "This version is in the affected range of a vulnerability that has been exploited in real attacks, and the feature it lives in is in use here.",
+      "recommendation": "Upgrade to a fixed release as soon as you can. Until then, turn off or restrict the affected feature and check the firewall for signs of compromise as the advisory describes.",
+      "references": [
+        "https://www.fortiguard.com/psirt",
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      ],
+      "evidence": [
+        "CVE-2024-21762 / FG-IR-24-015",
+        "SSL-VPN: enabled on wan1",
+        "Source: built-in advisory list; confirm on the Fortinet PSIRT site"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "ID.RA-1",
+          "PR.IP-12"
+        ],
+        "MITRE ATT&CK": [
+          "T1190"
+        ],
+        "PCI DSS": [
+          "6.3.3"
+        ],
+        "ISO 27001": [
+          "A.8.8"
+        ]
+      }
+    },
+    {
+      "unique_id": "IFACE_MGMT_ON_WAN-a1934f7d",
+      "rule_id": "IFACE_MGMT_ON_WAN",
+      "vdom": "root",
+      "category": "Interface",
+      "severity": "Critical",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 56,
+      "exposure": "management plane",
+      "affected_object": "wan1",
+      "title": "Firewall management is reachable from the internet",
+      "description": "Interface wan1 faces the internet (it has role wan) and accepts HTTPS, HTTP, SSH and telnet management connections from any address.",
+      "impact": "The admin login page, SSH or SNMP is open on an internet-facing interface. FortiOS has had several authentication bypass bugs in the admin interface, and exposed management is scanned constantly.",
+      "recommendation": "Remove https, http, ssh, telnet and snmp from allowaccess on internet-facing interfaces. If you have to manage over the internet, limit sources with a local-in policy or use a VPN.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark",
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "config system interface / edit wan1 (line 30)",
+        "allowaccess ping https ssh telnet http"
+      ],
+      "compliance": {
+        "CIS": [
+          "1.2"
+        ],
+        "NIST CSF": [
+          "PR.AC-5"
+        ],
+        "MITRE ATT&CK": [
+          "T1133"
+        ],
+        "PCI DSS": [
+          "1.3.1"
+        ],
+        "ISO 27001": [
+          "A.8.20"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_SHADOW_CONFLICT-c965dcef",
+      "rule_id": "POLICY_SHADOW_CONFLICT",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "Critical",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 40,
+      "exposure": "internal",
+      "affected_object": "policy 5 \"Deny-Partner-SSH-shadowed\"",
+      "title": "Rule never takes effect because an earlier rule does the opposite",
+      "description": "Policy 5 \"Deny-Partner-SSH-shadowed\" (deny) sits below policy 4 \"Allow-Partner-SSH\" (accept), and policy 4 already matches every packet policy 5 would. FortiGate uses the first match, so policy 5 never takes effect and the traffic it's meant to block is allowed.",
+      "impact": "FortiGate stops at the first matching rule. An earlier rule with the opposite action catches all of this rule's traffic, so a block here doesn't block anything, or an allow here never allows anything.",
+      "recommendation": "Move this rule above the broader one, or narrow the broader rule so it no longer covers this traffic.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config firewall policy / edit 5 (line 174)",
+        "config firewall policy / edit 4 (line 161)",
+        "never reached: internal -> dmz; from 198.51.100.0/24 to 10.0.0.50/32; service tcp/22; action deny",
+        "matched first: internal -> dmz; from 198.51.100.0/24 to 10.0.0.0/24; service tcp/22; action accept"
+      ],
+      "compliance": {
+        "CIS": [
+          "4.1"
+        ],
+        "NIST CSF": [
+          "PR.AC-5"
+        ],
+        "MITRE ATT&CK": [
+          "T1562"
+        ],
+        "PCI DSS": [
+          "1.2.1"
+        ],
+        "ISO 27001": [
+          "A.8.20",
+          "A.8.9"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_ANY_ANY_ANY-37f0f0cd",
+      "rule_id": "POLICY_ANY_ANY_ANY",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "High",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 38,
+      "exposure": "internet-facing",
+      "affected_object": "policy 2 \"Outbound-Any\"",
+      "title": "Rule allows any source to reach any destination on any port",
+      "description": "Policy 2 \"Outbound-Any\" allows any source to reach any destination on any service, for traffic going out to the internet.",
+      "impact": "Anything that arrives on the rule's interfaces gets through. Segmentation stops at this rule, and an attacker who lands on one side can reach everything on the other.",
+      "recommendation": "Replace it with rules for the sources, destinations and services people actually need. If it was added as a temporary fix, remove it.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config firewall policy / edit 2 (line 138)",
+        "internal -> wan1; from any IPv4 address to any IPv4 address; service ALL; action accept"
+      ],
+      "compliance": {
+        "CIS": [
+          "4.1"
+        ],
+        "NIST CSF": [
+          "PR.AC-5",
+          "PR.PT-3"
+        ],
+        "MITRE ATT&CK": [
+          "T1021"
+        ],
+        "PCI DSS": [
+          "1.2.1",
+          "1.3.4"
+        ],
+        "ISO 27001": [
+          "A.8.20",
+          "A.8.22"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_NO_UTM-d2deef7a",
+      "rule_id": "POLICY_NO_UTM",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "High",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 38,
+      "exposure": "internet-facing",
+      "affected_object": "policy 2 \"Outbound-Any\"",
+      "title": "Traffic is allowed without any security inspection",
+      "description": "Policy 2 \"Outbound-Any\" allows traffic going out to the internet without any security profile.",
+      "impact": "No IPS, antivirus, web, DNS or application control looks at this traffic, so malware and exploit attempts pass straight through.",
+      "recommendation": "Attach security profiles to the rule, at least IPS and antivirus, and make sure utm-status is enabled.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark",
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "config firewall policy / edit 2 (line 138)",
+        "internal -> wan1; from any IPv4 address to any IPv4 address; service ALL; action accept"
+      ],
+      "compliance": {
+        "CIS": [
+          "8.1"
+        ],
+        "NIST CSF": [
+          "DE.CM-1",
+          "PR.PT-3"
+        ],
+        "MITRE ATT&CK": [
+          "T1190"
+        ],
+        "PCI DSS": [
+          "11.5"
+        ],
+        "ISO 27001": [
+          "A.8.7",
+          "A.8.16"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_WAN_EXPOSURE-49288236",
+      "rule_id": "POLICY_WAN_EXPOSURE",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "High",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 38,
+      "exposure": "internet-facing",
+      "affected_object": "policy 3 \"WAN-Full-Access\"",
+      "title": "Internet traffic can reach internal services too broadly",
+      "description": "Policy 3 \"WAN-Full-Access\" lets internet traffic reach every service.",
+      "impact": "A rule from an internet-facing interface opens more than a single published service, or opens remote-access protocols that attackers scan for all day.",
+      "recommendation": "Publish only what must be public, through VIPs. Restrict sources where you can and put IPS on the rule. Admin protocols such as RDP and SSH belong behind a VPN.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config firewall policy / edit 3 (line 150)",
+        "wan1 -> dmz; from any IPv4 address to any IPv4 address; service ALL; action accept"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.AC-5",
+          "DE.CM-1"
+        ],
+        "MITRE ATT&CK": [
+          "T1190",
+          "T1133"
+        ],
+        "PCI DSS": [
+          "1.3.1",
+          "1.3.2"
+        ],
+        "ISO 27001": [
+          "A.8.20",
+          "A.8.22"
+        ]
+      }
+    },
+    {
+      "unique_id": "ADMIN_NO_MFA-9671d574",
+      "rule_id": "ADMIN_NO_MFA",
+      "vdom": "root",
+      "category": "Administrative Security",
+      "severity": "High",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 35,
+      "exposure": "management plane",
+      "affected_object": "admin, backup_admin, thirdsuper",
+      "title": "Admin accounts without two-factor authentication",
+      "description": "3 admin accounts can log in with a password alone: admin, backup_admin, thirdsuper.",
+      "impact": "A stolen or guessed password is enough to take over the firewall.",
+      "recommendation": "Enable two-factor authentication (FortiToken, email or SMS) for every admin, or enforce MFA on the RADIUS or LDAP server that authenticates them.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system admin / edit admin (line 15)",
+        "config system admin / edit backup_admin (line 20)",
+        "config system admin / edit thirdsuper (line 24)"
+      ],
+      "compliance": {
+        "CIS": [
+          "3.1"
+        ],
+        "NIST CSF": [
+          "PR.AC-7"
+        ],
+        "MITRE ATT&CK": [
+          "T1078"
+        ],
+        "PCI DSS": [
+          "8.4",
+          "8.5"
+        ],
+        "ISO 27001": [
+          "A.8.5"
+        ]
+      }
+    },
+    {
+      "unique_id": "ADMIN_NO_TRUSTED_HOST-993b0484",
+      "rule_id": "ADMIN_NO_TRUSTED_HOST",
+      "vdom": "root",
+      "category": "Administrative Security",
+      "severity": "High",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 35,
+      "exposure": "management plane",
+      "affected_object": "admin, backup_admin",
+      "title": "Admin accounts that can log in from anywhere",
+      "description": "2 admin accounts have no trusted hosts and can log in from any address that reaches the admin interface: admin, backup_admin. Because not every account is restricted, trusted hosts don't limit who can reach the login page at all.",
+      "impact": "Without trusted hosts, anyone who can reach the admin interface can try these accounts' passwords.",
+      "recommendation": "Set trusthost entries to your management networks. Trusted hosts only help if every admin account has them, and they don't stop attacks that happen before login, so also restrict the admin interfaces with a local-in policy.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system admin / edit admin (line 15)",
+        "config system admin / edit backup_admin (line 20)"
+      ],
+      "compliance": {
+        "CIS": [
+          "3.2"
+        ],
+        "NIST CSF": [
+          "PR.AC-5"
+        ],
+        "PCI DSS": [
+          "1.3.1"
+        ],
+        "ISO 27001": [
+          "A.8.20"
+        ]
+      }
+    },
+    {
+      "unique_id": "ADMIN_INSECURE_ACCESS-88026f5f",
+      "rule_id": "ADMIN_INSECURE_ACCESS",
+      "vdom": "root",
+      "category": "Administrative Security",
+      "severity": "High",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 35,
+      "exposure": "management plane",
+      "affected_object": "wan1",
+      "title": "Unencrypted admin access (HTTP or Telnet)",
+      "description": "Telnet, which sends passwords in clear text, is enabled on wan1. HTTP admin access is enabled on wan1. It only redirects to HTTPS, but that first request can be intercepted.",
+      "impact": "Telnet sends passwords in clear text. HTTP only redirects to HTTPS, but someone on the path can intercept that redirect.",
+      "recommendation": "Remove telnet and http from allowaccess on every interface and use SSH and HTTPS only.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system interface / edit wan1 (allowaccess includes telnet)",
+        "config system interface / edit wan1 (allowaccess includes http)"
+      ],
+      "compliance": {
+        "CIS": [
+          "1.1"
+        ],
+        "NIST CSF": [
+          "PR.DS-2"
+        ],
+        "MITRE ATT&CK": [
+          "T1040"
+        ],
+        "PCI DSS": [
+          "2.2.5",
+          "4.2"
+        ],
+        "ISO 27001": [
+          "A.8.24"
+        ]
+      }
+    },
+    {
+      "unique_id": "HARDEN_WEAK_CRYPTO-4b016852",
+      "rule_id": "HARDEN_WEAK_CRYPTO",
+      "vdom": "root",
+      "category": "System Hardening",
+      "severity": "High",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 35,
+      "exposure": "management plane",
+      "affected_object": "system global",
+      "title": "Strong cryptography is turned off",
+      "description": "Strong-crypto is disabled, so the firewall's own HTTPS, SSH and FortiGuard connections may use weak ciphers.",
+      "impact": "The firewall will accept weak ciphers and old protocols for its own HTTPS, SSH and FortiGuard connections.",
+      "recommendation": "Turn it back on: config system global / set strong-crypto enable.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark",
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "config system global (line 5)",
+        "set strong-crypto disable"
+      ],
+      "compliance": {
+        "CIS": [
+          "1.3"
+        ],
+        "NIST CSF": [
+          "PR.DS-2"
+        ],
+        "PCI DSS": [
+          "4.2.1"
+        ],
+        "ISO 27001": [
+          "A.8.24"
+        ]
+      }
+    },
+    {
+      "unique_id": "EXPOSURE_NAKED_SERVICE-c9c7dad8",
+      "rule_id": "EXPOSURE_NAKED_SERVICE",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "High",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 32,
+      "exposure": "internet-facing",
+      "affected_object": "VIP WEB_VIP via policy 1 \"Inbound-Web-VIP\"",
+      "title": "Service reachable from the internet without any inspection",
+      "description": "VIP WEB_VIP publishes 203.0.113.10:443/tcp to 10.0.0.50:443, and policy 1 \"Inbound-Web-VIP\" lets the internet reach it (tcp/443). The rule has no security profile, so nothing inspects that traffic.",
+      "impact": "A server is reachable from the internet and the rule that lets traffic in has no security profile. Exploit attempts reach it untouched, and published servers are among the first things attackers probe.",
+      "recommendation": "Add IPS to the rule (and antivirus where files are exchanged), use deep inspection if the service uses TLS and you can load its certificate, and limit sources where you can.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark",
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "external: 203.0.113.10:443/tcp",
+        "internal: 10.0.0.50:443",
+        "service: tcp/443",
+        "allowed by: policy 1 \"Inbound-Web-VIP\"",
+        "security profiles: none",
+        "SSL inspection: n/a"
+      ],
+      "compliance": {
+        "CIS": [
+          "8.1"
+        ],
+        "NIST CSF": [
+          "DE.CM-1",
+          "PR.AC-5"
+        ],
+        "MITRE ATT&CK": [
+          "T1190"
+        ],
+        "PCI DSS": [
+          "1.3.1",
+          "11.5"
+        ],
+        "ISO 27001": [
+          "A.8.7",
+          "A.8.20"
+        ]
+      }
+    },
+    {
+      "unique_id": "EXPOSURE_NAKED_SERVICE-98cd0ac4",
+      "rule_id": "EXPOSURE_NAKED_SERVICE",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "High",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 32,
+      "exposure": "internet-facing",
+      "affected_object": "policy 3 \"WAN-Full-Access\"",
+      "title": "Service reachable from the internet without any inspection",
+      "description": "Policy 3 \"WAN-Full-Access\" lets internet traffic from any IPv4 address reach any IPv4 address on any port. The rule has no security profile, so nothing inspects that traffic.",
+      "impact": "A server is reachable from the internet and the rule that lets traffic in has no security profile. Exploit attempts reach it untouched, and published servers are among the first things attackers probe.",
+      "recommendation": "Add IPS to the rule (and antivirus where files are exchanged), use deep inspection if the service uses TLS and you can load its certificate, and limit sources where you can.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark",
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "external: from any IPv4 address",
+        "internal: any IPv4 address",
+        "service: ALL",
+        "allowed by: policy 3 \"WAN-Full-Access\"",
+        "security profiles: none",
+        "SSL inspection: n/a"
+      ],
+      "compliance": {
+        "CIS": [
+          "8.1"
+        ],
+        "NIST CSF": [
+          "DE.CM-1",
+          "PR.AC-5"
+        ],
+        "MITRE ATT&CK": [
+          "T1190"
+        ],
+        "PCI DSS": [
+          "1.3.1",
+          "11.5"
+        ],
+        "ISO 27001": [
+          "A.8.7",
+          "A.8.20"
+        ]
+      }
+    },
+    {
+      "unique_id": "VPN_SSLVPN_WAN_PORTAL-a8791841",
+      "rule_id": "VPN_SSLVPN_WAN_PORTAL",
+      "vdom": "root",
+      "category": "VPN",
+      "severity": "High",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 32,
+      "exposure": "internet-facing",
+      "affected_object": "vpn ssl settings",
+      "title": "SSL-VPN portal open to the internet",
+      "description": "SSL-VPN is enabled on wan1, which faces the internet, and the firewall runs FortiOS 7.2.5. Any source address can reach the login page. Web mode is on in portal full-access, which puts more code within reach of the internet.",
+      "impact": "The FortiGate SSL-VPN has had several critical bugs that let attackers in before login, and they have been exploited at scale. An internet-facing portal needs current firmware and tight controls.",
+      "recommendation": "Keep the firmware on a fixed release, require MFA, restrict source addresses or countries, and consider moving users to IPsec VPN or ZTNA.",
+      "references": [
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "config vpn ssl settings (line 250)",
+        "source-interface wan1",
+        "source-address all"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.AC-3",
+          "ID.RA-1"
+        ],
+        "MITRE ATT&CK": [
+          "T1133",
+          "T1190"
+        ],
+        "PCI DSS": [
+          "6.3.3"
+        ],
+        "ISO 27001": [
+          "A.8.8",
+          "A.8.20"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_SSL_INEFFECTIVE_PAYLOAD-7314df24",
+      "rule_id": "POLICY_SSL_INEFFECTIVE_PAYLOAD",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "High",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 25,
+      "exposure": "internal",
+      "affected_object": "policy 4 \"Allow-Partner-SSH\"",
+      "title": "Scanners can't see inside encrypted traffic",
+      "description": "Policy 4 \"Allow-Partner-SSH\" relies on IPS and antivirus, but its SSL profile (cert-inspect) only does certificate inspection. Encrypted content passes these scanners unseen.",
+      "impact": "Antivirus, DLP, file filtering and email filtering need decrypted content. With certificate inspection or no inspection they only see the handshake, so most modern traffic goes unscanned.",
+      "recommendation": "Use a deep-inspection SSL/SSH profile on rules where you rely on these scanners, with exemptions for sensitive categories such as banking and health.",
+      "references": [
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "config firewall policy / edit 4 (line 161)",
+        "internal -> dmz; from 198.51.100.0/24 to 10.0.0.0/24; service tcp/22; action accept"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "DE.CM-1"
+        ],
+        "MITRE ATT&CK": [
+          "T1573"
+        ],
+        "ISO 27001": [
+          "A.8.24"
+        ]
+      }
+    },
+    {
+      "unique_id": "ZONE_INTRAZONE_ALLOW-49bea218",
+      "rule_id": "ZONE_INTRAZONE_ALLOW",
+      "vdom": "root",
+      "category": "Interface",
+      "severity": "High",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 25,
+      "exposure": "internal",
+      "affected_object": "DMZ_ZONE",
+      "title": "Traffic between interfaces in a zone isn't filtered",
+      "description": "Zone 'DMZ_ZONE' has intrazone set to allow, so traffic between its 2 interfaces (dmz, internal) passes without any rule. The policy table won't show it.",
+      "impact": "With intrazone allow, traffic between the zone's interfaces passes without any rule. If they are different segments there's no segmentation between them, and it won't show up in the policy table.",
+      "recommendation": "Set intrazone deny and write rules for the traffic that should flow, or split unrelated networks into separate zones.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system zone / edit DMZ_ZONE (line 229)",
+        "set intrazone allow",
+        "members: dmz, internal"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.AC-5"
+        ],
+        "MITRE ATT&CK": [
+          "T1021"
+        ],
+        "PCI DSS": [
+          "1.3.6"
+        ],
+        "ISO 27001": [
+          "A.8.22"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_LOGGING_DISABLED-b5c44772",
+      "rule_id": "POLICY_LOGGING_DISABLED",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "Medium",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 18,
+      "exposure": "internet-facing",
+      "affected_object": "policy 2 \"Outbound-Any\"",
+      "title": "Traffic logging is turned off on an allow rule",
+      "description": "Policy 2 \"Outbound-Any\" allows traffic going out to the internet with logging turned off.",
+      "impact": "Sessions this rule allows leave no record, so there's nothing to look at after an incident.",
+      "recommendation": "Set logtraffic to all, or at least utm.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config firewall policy / edit 2 (line 138)",
+        "internal -> wan1; from any IPv4 address to any IPv4 address; service ALL; action accept"
+      ],
+      "compliance": {
+        "CIS": [
+          "7.1"
+        ],
+        "NIST CSF": [
+          "DE.CM-1",
+          "PR.PT-1"
+        ],
+        "PCI DSS": [
+          "10.2"
+        ],
+        "ISO 27001": [
+          "A.8.15"
+        ]
+      }
+    },
+    {
+      "unique_id": "ADMIN_WEAK_PASSWORD_POLICY-a7f20ac0",
+      "rule_id": "ADMIN_WEAK_PASSWORD_POLICY",
+      "vdom": "root",
+      "category": "Administrative Security",
+      "severity": "Medium",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 17,
+      "exposure": "management plane",
+      "affected_object": "system password-policy",
+      "title": "Weak password rules for admins",
+      "description": "The admin password policy is turned off, so any password is accepted.",
+      "impact": "Without length and complexity rules, admins can set short passwords that are quick to guess.",
+      "recommendation": "Enable the admin password policy with a minimum length of 12 and at least two character types (config system password-policy).",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system password-policy (line 11)"
+      ],
+      "compliance": {
+        "CIS": [
+          "2.1"
+        ],
+        "NIST CSF": [
+          "PR.AC-1"
+        ],
+        "PCI DSS": [
+          "8.3"
+        ],
+        "ISO 27001": [
+          "A.5.17"
+        ]
+      }
+    },
+    {
+      "unique_id": "ADMIN_MULTIPLE_SUPER_ADMIN-3325093b",
+      "rule_id": "ADMIN_MULTIPLE_SUPER_ADMIN",
+      "vdom": "root",
+      "category": "Administrative Security",
+      "severity": "Medium",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 14,
+      "exposure": "management plane",
+      "affected_object": "admin, backup_admin, thirdsuper",
+      "title": "Several accounts with full super_admin rights",
+      "description": "3 accounts have the super_admin profile: admin, backup_admin, thirdsuper.",
+      "impact": "Each super_admin account can change anything. The more of them there are, the more ways in, and the harder it is to tell who changed what.",
+      "recommendation": "Keep super_admin to one or two accounts and give everyone else a profile limited to their job.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system admin / edit admin (line 15)",
+        "config system admin / edit backup_admin (line 20)",
+        "config system admin / edit thirdsuper (line 24)"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.AC-4"
+        ],
+        "PCI DSS": [
+          "7.2"
+        ],
+        "ISO 27001": [
+          "A.8.2"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_ANY_ANY_ANY-1a085492",
+      "rule_id": "POLICY_ANY_ANY_ANY",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "Medium",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 12,
+      "exposure": "internal",
+      "affected_object": "policy 9 \"DMZ-Intrazone-Traffic\"",
+      "title": "Rule allows any source to reach any destination on any port",
+      "description": "Policy 9 \"DMZ-Intrazone-Traffic\" allows any source to reach any destination on any service, for traffic inside one zone.",
+      "impact": "Anything that arrives on the rule's interfaces gets through. Segmentation stops at this rule, and an attacker who lands on one side can reach everything on the other.",
+      "recommendation": "Replace it with rules for the sources, destinations and services people actually need. If it was added as a temporary fix, remove it.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config firewall policy / edit 9 (line 217)",
+        "dmz, internal -> dmz, internal; from any IPv4 address to any IPv4 address; service ALL; action accept"
+      ],
+      "compliance": {
+        "CIS": [
+          "4.1"
+        ],
+        "NIST CSF": [
+          "PR.AC-5",
+          "PR.PT-3"
+        ],
+        "MITRE ATT&CK": [
+          "T1021"
+        ],
+        "PCI DSS": [
+          "1.2.1",
+          "1.3.4"
+        ],
+        "ISO 27001": [
+          "A.8.20",
+          "A.8.22"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_NO_UTM-51cc122c",
+      "rule_id": "POLICY_NO_UTM",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "Medium",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 12,
+      "exposure": "internal",
+      "affected_object": "policy 9 \"DMZ-Intrazone-Traffic\"",
+      "title": "Traffic is allowed without any security inspection",
+      "description": "Policy 9 \"DMZ-Intrazone-Traffic\" allows traffic inside one zone without any security profile.",
+      "impact": "No IPS, antivirus, web, DNS or application control looks at this traffic, so malware and exploit attempts pass straight through.",
+      "recommendation": "Attach security profiles to the rule, at least IPS and antivirus, and make sure utm-status is enabled.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark",
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "config firewall policy / edit 9 (line 217)",
+        "dmz, internal -> dmz, internal; from any IPv4 address to any IPv4 address; service ALL; action accept"
+      ],
+      "compliance": {
+        "CIS": [
+          "8.1"
+        ],
+        "NIST CSF": [
+          "DE.CM-1",
+          "PR.PT-3"
+        ],
+        "MITRE ATT&CK": [
+          "T1190"
+        ],
+        "PCI DSS": [
+          "11.5"
+        ],
+        "ISO 27001": [
+          "A.8.7",
+          "A.8.16"
+        ]
+      }
+    },
+    {
+      "unique_id": "LOG_NO_FORTIANALYZER-5e469a6e",
+      "rule_id": "LOG_NO_FORTIANALYZER",
+      "vdom": "root",
+      "category": "Logging & Monitoring",
+      "severity": "Medium",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 12,
+      "exposure": "internal",
+      "affected_object": "remote logging",
+      "title": "Logs aren't sent off the firewall",
+      "description": "No remote log destination is enabled: no FortiAnalyzer, no FortiCloud logging and no syslog server. Logs exist only on the firewall itself.",
+      "impact": "Logs stay on the device, where space is limited and anyone who takes over the firewall can delete them.",
+      "recommendation": "Send logs to FortiAnalyzer, FortiAnalyzer Cloud or a syslog/SIEM server.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "no log fortianalyzer or log syslogd settings are enabled"
+      ],
+      "compliance": {
+        "CIS": [
+          "7.2"
+        ],
+        "NIST CSF": [
+          "DE.CM-1",
+          "PR.PT-1"
+        ],
+        "PCI DSS": [
+          "10.5"
+        ],
+        "ISO 27001": [
+          "A.8.15"
+        ]
+      }
+    },
+    {
+      "unique_id": "PROFILE_SSL_DEFAULT_CA-fc24422f",
+      "rule_id": "PROFILE_SSL_DEFAULT_CA",
+      "vdom": "root",
+      "category": "Security Profile",
+      "severity": "Medium",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 12,
+      "exposure": "internal",
+      "affected_object": "deep-default-ca",
+      "title": "Deep inspection uses the built-in Fortinet CA",
+      "description": "SSL/SSH profile 'deep-default-ca' does deep inspection and signs with the factory CA 'Fortinet_CA_SSL'.",
+      "impact": "Clients have to trust the CA that deep inspection signs with. The factory Fortinet CA isn't part of your PKI and isn't managed by you, which weakens the whole setup.",
+      "recommendation": "Issue a subordinate CA from your own PKI for SSL inspection and push it to clients.",
+      "references": [
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "config firewall ssl-ssh-profile / edit deep-default-ca (line 102)",
+        "caname Fortinet_CA_SSL"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.DS-2"
+        ],
+        "ISO 27001": [
+          "A.8.24"
+        ]
+      }
+    },
+    {
+      "unique_id": "PROFILE_IPS_MONITOR_ONLY-93454922",
+      "rule_id": "PROFILE_IPS_MONITOR_ONLY",
+      "vdom": "root",
+      "category": "Security Profile",
+      "severity": "Medium",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 10,
+      "exposure": "internal",
+      "affected_object": "ips-monitor",
+      "title": "IPS sensor only watches, never blocks",
+      "description": "IPS sensor 'ips-monitor' is used by rules, but every signature action in it is monitor or pass. Nothing gets blocked.",
+      "impact": "Every configured signature action is monitor or pass. Attacks get logged but still reach their target.",
+      "recommendation": "Set the action to block for high and critical signatures once you've checked for false positives.",
+      "references": [],
+      "evidence": [
+        "config ips sensor / edit ips-monitor (line 110)"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "DE.CM-1",
+          "PR.PT-3"
+        ],
+        "ISO 27001": [
+          "A.8.16"
+        ]
+      }
+    },
+    {
+      "unique_id": "ADMIN_DEFAULT_NAME-c40f81a5",
+      "rule_id": "ADMIN_DEFAULT_NAME",
+      "vdom": "root",
+      "category": "Administrative Security",
+      "severity": "Low",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 7,
+      "exposure": "management plane",
+      "affected_object": "admin",
+      "title": "Default 'admin' account still exists",
+      "description": "The factory account name 'admin' is still in use.",
+      "impact": "'admin' is the first username every attacker tries, so keeping it gives away half of the login.",
+      "recommendation": "Create personal admin accounts, then rename or delete the default 'admin' account.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system admin / edit admin (line 15)"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.AC-1"
+        ],
+        "ISO 27001": [
+          "A.5.16"
+        ]
+      }
+    },
+    {
+      "unique_id": "FW_KNOWN_EXPLOITED-e9cc6d54",
+      "rule_id": "FW_KNOWN_EXPLOITED",
+      "vdom": "root",
+      "category": "System Hardening",
+      "severity": "Low",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 6,
+      "exposure": "management plane",
+      "affected_object": "CVE-2024-23113 on FortiOS 7.2.5",
+      "title": "Firmware has a vulnerability that attackers are known to use",
+      "description": "FortiOS 7.2.5 is affected by CVE-2024-23113 (FG-IR-24-029): a format string bug in the FortiManager connection daemon (fgfm) that can be exploited without logging in. The vulnerable code is in FortiManager access (fgfm), which isn't enabled in this backup, so it can't be reached right now. Upgrade anyway: one config change would expose it.",
+      "impact": "This version is in the affected range of a vulnerability that has been exploited in real attacks, and the feature it lives in is in use here.",
+      "recommendation": "Upgrade to a fixed release as soon as you can. Until then, turn off or restrict the affected feature and check the firewall for signs of compromise as the advisory describes.",
+      "references": [
+        "https://www.fortiguard.com/psirt",
+        "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+      ],
+      "evidence": [
+        "CVE-2024-23113 / FG-IR-24-029",
+        "FortiManager access (fgfm): no interface allows fgfm access",
+        "Source: built-in advisory list; confirm on the Fortinet PSIRT site"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "ID.RA-1",
+          "PR.IP-12"
+        ],
+        "MITRE ATT&CK": [
+          "T1190"
+        ],
+        "PCI DSS": [
+          "6.3.3"
+        ],
+        "ISO 27001": [
+          "A.8.8"
+        ]
+      }
+    },
+    {
+      "unique_id": "HARDEN_ADMIN_TIMEOUT-b5e47494",
+      "rule_id": "HARDEN_ADMIN_TIMEOUT",
+      "vdom": "root",
+      "category": "System Hardening",
+      "severity": "Low",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 6,
+      "exposure": "management plane",
+      "affected_object": "system global",
+      "title": "Admin sessions stay open too long",
+      "description": "Idle admin sessions time out after 480 minutes. The review's limit is 15 minutes.",
+      "impact": "An unattended logged-in session can be used by whoever sits down at it or manages to hijack it.",
+      "recommendation": "Set admintimeout to a short value, such as 5 to 10 minutes.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system global (line 5)",
+        "set admintimeout 480"
+      ],
+      "compliance": {
+        "CIS": [
+          "2.2"
+        ],
+        "NIST CSF": [
+          "PR.AC-7"
+        ],
+        "PCI DSS": [
+          "8.2.8"
+        ],
+        "ISO 27001": [
+          "A.8.5"
+        ]
+      }
+    },
+    {
+      "unique_id": "HARDEN_ADMIN_LOCKOUT-ac030f42",
+      "rule_id": "HARDEN_ADMIN_LOCKOUT",
+      "vdom": "root",
+      "category": "System Hardening",
+      "severity": "Low",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 6,
+      "exposure": "management plane",
+      "affected_object": "system global",
+      "title": "Short lockout after failed admin logins",
+      "description": "Admin login lockout is weak: the lockout only lasts 60 seconds.",
+      "impact": "After a few wrong passwords the admin login is only blocked briefly, so password guessing can carry on at a steady pace.",
+      "recommendation": "Set admin-lockout-threshold to 3 and admin-lockout-duration to 900 seconds or more.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system global (line 5)",
+        "admin-lockout-threshold 3",
+        "admin-lockout-duration 60"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.AC-7"
+        ],
+        "MITRE ATT&CK": [
+          "T1110"
+        ],
+        "ISO 27001": [
+          "A.8.5"
+        ]
+      }
+    },
+    {
+      "unique_id": "VPN_SSL_DEFAULT_CERT-178e22ab",
+      "rule_id": "VPN_SSL_DEFAULT_CERT",
+      "vdom": "root",
+      "category": "VPN",
+      "severity": "Low",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 6,
+      "exposure": "internet-facing",
+      "affected_object": "vpn ssl settings",
+      "title": "SSL-VPN uses the factory certificate",
+      "description": "The SSL-VPN portal presents the factory certificate 'Fortinet_Factory'.",
+      "impact": "Users see a certificate warning every time they connect and learn to click through it. That makes a fake portal much easier to pass off.",
+      "recommendation": "Install a certificate from a trusted CA for the portal's hostname and set it as servercert.",
+      "references": [
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "config vpn ssl settings (line 250)",
+        "servercert (not set, Fortinet_Factory)"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.DS-2"
+        ],
+        "ISO 27001": [
+          "A.8.24"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_DUPLICATE-c67c0db7",
+      "rule_id": "POLICY_DUPLICATE",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "Low",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 5,
+      "exposure": "internal",
+      "affected_object": "policy 7 \"Redundant-Web-B\"",
+      "title": "Duplicate rule",
+      "description": "Policy 7 \"Redundant-Web-B\" is an exact copy of policy 6 \"Redundant-Web-A\": same traffic, same action, same NAT, inspection and logging. Policy 7 never gets used.",
+      "impact": "Two rules match exactly the same traffic and treat it the same way. The second one never does anything.",
+      "recommendation": "Delete the later copy.",
+      "references": [],
+      "evidence": [
+        "config firewall policy / edit 7 (line 195)",
+        "config firewall policy / edit 6 (line 184)",
+        "internal -> dmz; from 192.168.1.0/24 to 10.0.0.50/32; service tcp/443; action accept"
+      ],
+      "compliance": {
+        "ISO 27001": [
+          "A.8.9"
+        ]
+      }
+    },
+    {
+      "unique_id": "OBJ_EMPTY_GROUP-bb00c617",
+      "rule_id": "OBJ_EMPTY_GROUP",
+      "vdom": "root",
+      "category": "Objects",
+      "severity": "Low",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 5,
+      "exposure": "internal",
+      "affected_object": "EMPTY_GROUP",
+      "title": "Empty address or service group",
+      "description": "Address group 'EMPTY_GROUP' has no members.",
+      "impact": "A group without members usually matches nothing, which quietly disables any rule that uses it. That's almost always a mistake.",
+      "recommendation": "Add the intended members, or remove the group and the rules that use it.",
+      "references": [],
+      "evidence": [
+        "config firewall addrgrp / edit EMPTY_GROUP (line 73)"
+      ],
+      "compliance": {
+        "ISO 27001": [
+          "A.8.9"
+        ]
+      }
+    },
+    {
+      "unique_id": "OBJ_DUPLICATE_ADDRESS-287bb9bc",
+      "rule_id": "OBJ_DUPLICATE_ADDRESS",
+      "vdom": "root",
+      "category": "Objects",
+      "severity": "Low",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 5,
+      "exposure": "internal",
+      "affected_object": "WEB_SERVER, WEB_SERVER_DUP",
+      "title": "Several address objects for the same network",
+      "description": "2 address objects all define 10.0.0.50/32: WEB_SERVER, WEB_SERVER_DUP.",
+      "impact": "When one network has several names, rules drift apart as people update one object and not the others.",
+      "recommendation": "Keep one object per network and point all rules at it.",
+      "references": [],
+      "evidence": [
+        "config firewall address / edit WEB_SERVER (line 56)",
+        "config firewall address / edit WEB_SERVER_DUP (line 59)"
+      ],
+      "compliance": {
+        "ISO 27001": [
+          "A.8.9"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_NO_UTM-18b7ad35",
+      "rule_id": "POLICY_NO_UTM",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "Low",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 4,
+      "exposure": "internal",
+      "affected_object": "2 rules in VDOM root",
+      "title": "Traffic is allowed without any security inspection",
+      "description": "2 rules allow narrow internal traffic without any security profile: 6, 7. Each one is low risk on its own, but together they show how much east-west traffic goes uninspected.",
+      "impact": "No IPS, antivirus, web, DNS or application control looks at this traffic, so malware and exploit attempts pass straight through.",
+      "recommendation": "Attach security profiles to the rule, at least IPS and antivirus, and make sure utm-status is enabled.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark",
+        "https://docs.fortinet.com/document/fortigate/7.4.0/hardening-your-fortigate"
+      ],
+      "evidence": [
+        "policy ids: 6, 7"
+      ],
+      "compliance": {
+        "CIS": [
+          "8.1"
+        ],
+        "NIST CSF": [
+          "DE.CM-1",
+          "PR.PT-3"
+        ],
+        "MITRE ATT&CK": [
+          "T1190"
+        ],
+        "PCI DSS": [
+          "11.5"
+        ],
+        "ISO 27001": [
+          "A.8.7",
+          "A.8.16"
+        ]
+      }
+    },
+    {
+      "unique_id": "HARDEN_THREAT_FEED_MISSING-bbf11b6e",
+      "rule_id": "HARDEN_THREAT_FEED_MISSING",
+      "vdom": "root",
+      "category": "System Hardening",
+      "severity": "Low",
+      "confidence": "low",
+      "detection_confidence": "low",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.6,
+      "risk_score": 3,
+      "exposure": "internal",
+      "affected_object": "system external-resource",
+      "title": "No external threat feeds",
+      "description": "No external threat feeds are configured.",
+      "impact": "Threat feeds let rules block known-bad addresses and domains automatically. Not having one is a missed opportunity rather than a hole.",
+      "recommendation": "If you have a feed you trust, add it under system external-resource and use it in rules or DNS filtering.",
+      "references": [],
+      "evidence": [
+        "config system external-resource has no entries"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "ID.RA-2",
+          "DE.CM-1"
+        ]
+      }
+    },
+    {
+      "unique_id": "ADMIN_LOCAL_ACCOUNT-2d3853fa",
+      "rule_id": "ADMIN_LOCAL_ACCOUNT",
+      "vdom": "root",
+      "category": "Administrative Security",
+      "severity": "Informational",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 1,
+      "exposure": "management plane",
+      "affected_object": "admin, backup_admin, thirdsuper",
+      "title": "Local administrator accounts",
+      "description": "3 admin accounts are local to the firewall rather than checked against a central directory: admin, backup_admin, thirdsuper.",
+      "impact": "Local accounts live only on this firewall. Your central password, MFA and offboarding processes don't reach them, so old accounts tend to linger.",
+      "recommendation": "Authenticate admins against RADIUS, TACACS+ or LDAP with MFA. Keep a single local break-glass account with a long password stored offline.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system admin / edit admin (line 15)",
+        "config system admin / edit backup_admin (line 20)",
+        "config system admin / edit thirdsuper (line 24)"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.AC-1"
+        ],
+        "PCI DSS": [
+          "8.2"
+        ],
+        "ISO 27001": [
+          "A.5.16"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_DISABLED-7d41825d",
+      "rule_id": "POLICY_DISABLED",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "Informational",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 1,
+      "exposure": "internal",
+      "affected_object": "1 rule in VDOM root",
+      "title": "Disabled rules left in the policy table",
+      "description": "Rule 8 is disabled but still in the table.",
+      "impact": "Old disabled rules slow down reviews and can be switched back on by accident.",
+      "recommendation": "Delete disabled rules you no longer need. If you keep one on purpose, say why in its comment.",
+      "references": [],
+      "evidence": [
+        "policy ids: 8"
+      ],
+      "compliance": {
+        "ISO 27001": [
+          "A.8.9"
+        ]
+      }
+    },
+    {
+      "unique_id": "POLICY_NO_COMMENT-9b7633f5",
+      "rule_id": "POLICY_NO_COMMENT",
+      "vdom": "root",
+      "category": "Firewall Policy",
+      "severity": "Informational",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 1,
+      "exposure": "internal",
+      "affected_object": "8 rules in VDOM root",
+      "title": "Rules without a comment",
+      "description": "8 rules have no comment: 1, 2, 3, 4, 5, 6, 7, 9.",
+      "impact": "Without a comment nobody can tell later why a rule exists or who asked for it.",
+      "recommendation": "Add a comment with the purpose and the ticket or change number.",
+      "references": [],
+      "evidence": [
+        "policy ids: 1, 2, 3, 4, 5, 6, 7, 9"
+      ],
+      "compliance": {
+        "ISO 27001": [
+          "A.5.37"
+        ]
+      }
+    },
+    {
+      "unique_id": "FW_VERSION_REVIEW-1929499d",
+      "rule_id": "FW_VERSION_REVIEW",
+      "vdom": "root",
+      "category": "System Hardening",
+      "severity": "Informational",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 1,
+      "exposure": "management plane",
+      "affected_object": "FGVM64 7.2.5 (build 1517)",
+      "title": "Check this firmware version against Fortinet advisories",
+      "description": "The backup is from an FGVM64 running FortiOS 7.2.5 (build 1517). Check it against the current Fortinet PSIRT advisories; this review only knows about issues up to its own release.",
+      "impact": "Which vulnerabilities apply depends on the exact firmware. An offline review can't know about advisories published after it was written.",
+      "recommendation": "Look this model and version up on the Fortinet PSIRT site and upgrade to a fixed release if anything applies.",
+      "references": [
+        "https://www.fortiguard.com/psirt"
+      ],
+      "evidence": [
+        "#config-version=FGVM64-7.2.5-FW-build1517-230810:opmode=0:vdom=0"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "ID.RA-1"
+        ],
+        "PCI DSS": [
+          "6.3.3"
+        ],
+        "ISO 27001": [
+          "A.8.8"
+        ]
+      }
+    },
+    {
+      "unique_id": "HARDEN_LOGIN_BANNER-597db573",
+      "rule_id": "HARDEN_LOGIN_BANNER",
+      "vdom": "root",
+      "category": "System Hardening",
+      "severity": "Informational",
+      "confidence": "high",
+      "detection_confidence": "high",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 1.0,
+      "risk_score": 1,
+      "exposure": "internal",
+      "affected_object": "system global",
+      "title": "No login banner",
+      "description": "No banner is shown before admin login.",
+      "impact": "A banner tells people that access is monitored and only for authorised users. Some regulations and internal policies require one.",
+      "recommendation": "Enable pre-login-banner in system global and set the text under config system replacemsg admin.",
+      "references": [
+        "CIS Fortinet FortiGate Benchmark"
+      ],
+      "evidence": [
+        "config system global (line 5)",
+        "pre-login-banner is not enabled"
+      ],
+      "compliance": {
+        "ISO 27001": [
+          "A.5.10"
+        ]
+      }
+    },
+    {
+      "unique_id": "HA_STANDALONE-29ac7616",
+      "rule_id": "HA_STANDALONE",
+      "vdom": "root",
+      "category": "High Availability",
+      "severity": "Informational",
+      "confidence": "low",
+      "detection_confidence": "low",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.6,
+      "risk_score": 1,
+      "exposure": "internal",
+      "affected_object": "system ha",
+      "title": "No high availability",
+      "description": "This firewall runs on its own, without an HA partner.",
+      "impact": "If this unit fails, traffic stops until it's replaced. That can be a sensible choice for a small site.",
+      "recommendation": "If this firewall carries production traffic, consider an HA pair.",
+      "references": [],
+      "evidence": [
+        "config system ha is at its defaults"
+      ],
+      "compliance": {
+        "NIST CSF": [
+          "PR.IP-4"
+        ],
+        "ISO 27001": [
+          "A.8.14"
+        ]
+      }
+    },
+    {
+      "unique_id": "OBJ_UNUSED_ADDRESS-8760e3ab",
+      "rule_id": "OBJ_UNUSED_ADDRESS",
+      "vdom": "root",
+      "category": "Objects",
+      "severity": "Informational",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 0.9,
+      "effective_confidence": 0.765,
+      "risk_score": 1,
+      "exposure": "internal",
+      "affected_object": "2 address objects in VDOM root",
+      "title": "Unused address objects",
+      "description": "2 address objects in VDOM root are not referenced anywhere this review looks (rules, groups, routes, VPN and SD-WAN settings): UNUSED_HOST, WEB_SERVER_DUP.",
+      "impact": "Objects that nothing references clutter the configuration and are easy to reuse by mistake.",
+      "recommendation": "Delete them after checking that nothing outside this firewall (FortiManager, scripts) depends on them.",
+      "references": [],
+      "evidence": [
+        "config firewall address / edit WEB_SERVER_DUP (line 59)",
+        "config firewall address / edit UNUSED_HOST (line 62)"
+      ],
+      "compliance": {
+        "ISO 27001": [
+          "A.8.9"
+        ]
+      }
+    },
+    {
+      "unique_id": "OBJ_UNUSED_SERVICE-a460c9a0",
+      "rule_id": "OBJ_UNUSED_SERVICE",
+      "vdom": "root",
+      "category": "Objects",
+      "severity": "Informational",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 0.9,
+      "effective_confidence": 0.765,
+      "risk_score": 1,
+      "exposure": "internal",
+      "affected_object": "1 custom service in VDOM root",
+      "title": "Unused custom services",
+      "description": "1 custom service in VDOM root is not referenced anywhere this review looks (rules, groups, routes, VPN and SD-WAN settings): TCP_8080.",
+      "impact": "Custom services that nothing references are clutter.",
+      "recommendation": "Delete custom services you no longer need.",
+      "references": [],
+      "evidence": [
+        "config firewall service custom / edit TCP_8080 (line 78)"
+      ],
+      "compliance": {
+        "ISO 27001": [
+          "A.8.9"
+        ]
+      }
+    },
+    {
+      "unique_id": "OBJ_OVERLAPPING_SUBNET-005246b8",
+      "rule_id": "OBJ_OVERLAPPING_SUBNET",
+      "vdom": "root",
+      "category": "Objects",
+      "severity": "Informational",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 1,
+      "exposure": "internal",
+      "affected_object": "DMZ_NET / WEB_SERVER",
+      "title": "Address objects that overlap",
+      "description": "'WEB_SERVER' (10.0.0.50/32) sits inside 'DMZ_NET' (10.0.0.0/24).",
+      "impact": "One network sits inside another under a different name. That's often fine, but it can hide conflicting intent.",
+      "recommendation": "Check the pair and remove whichever one is left over, if any.",
+      "references": [],
+      "evidence": [
+        "config firewall address / edit DMZ_NET (line 53)",
+        "config firewall address / edit WEB_SERVER (line 56)"
+      ],
+      "compliance": {}
+    },
+    {
+      "unique_id": "OBJ_OVERLAPPING_SUBNET-4c5cd22e",
+      "rule_id": "OBJ_OVERLAPPING_SUBNET",
+      "vdom": "root",
+      "category": "Objects",
+      "severity": "Informational",
+      "confidence": "medium",
+      "detection_confidence": "medium",
+      "coverage_confidence": 1.0,
+      "effective_confidence": 0.85,
+      "risk_score": 1,
+      "exposure": "internal",
+      "affected_object": "DMZ_NET / WEB_SERVER_DUP",
+      "title": "Address objects that overlap",
+      "description": "'WEB_SERVER_DUP' (10.0.0.50/32) sits inside 'DMZ_NET' (10.0.0.0/24).",
+      "impact": "One network sits inside another under a different name. That's often fine, but it can hide conflicting intent.",
+      "recommendation": "Check the pair and remove whichever one is left over, if any.",
+      "references": [],
+      "evidence": [
+        "config firewall address / edit DMZ_NET (line 53)",
+        "config firewall address / edit WEB_SERVER_DUP (line 59)"
+      ],
+      "compliance": {}
+    }
+  ]
+}
